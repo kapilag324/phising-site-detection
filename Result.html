@@ -1,0 +1,20 @@
+{% extends "Layout.html" %}
+{%block title%} Result {%endblock%}
+{%block body %}
+	<div class="container">
+		<div class="jumbotron text-center">
+			<h2>  Discover if a URL is a Phishing URL  </h2>
+
+			<div class="alert alert-success"> Result of your prediction </div>
+
+			<div class="result">
+		
+				{% if prediction == "bad" %}
+				<h2 style="color: red">The Url is a Phishing Url</h2>
+				{% elif prediction == "good" %}
+				<h2 style="color: blue">The Url is Not a Phishing Url</h2>
+				{% endif%}
+			</div>	
+		</div>
+	</div>
+{%endblock%}

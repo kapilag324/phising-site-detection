@@ -1,0 +1,23 @@
+{% extends "Layout.html" %}
+{%block title%} Home_Index {%endblock%}
+{% block body%}
+	<div class="container">
+
+		<div class="jumbotron text-center">
+			<h2>  Discover if a URL is a Phishing URL</h2>
+		</div>
+
+		<form action="{{url_for('predict')}}" method="POST">
+			<h2>Enter Your URL</h2>	
+		<div class='input-group input-group-lg'>
+			
+			<input type='text' name="url" class='form-control'placeholder ='HTTP\\.WWW.ANYWEBSITE.COM' required="true">
+			<span class='input-group-btn'>
+				<button type="submit" class='btn btn-primary btn-lg'>SCAN</button>
+			</span>
+	
+		</div><br>
+		</form>	
+    </div>	
+{%endblock%}
+
